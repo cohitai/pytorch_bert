@@ -10,6 +10,8 @@ from bert.trainer import BertTrainer
 
 BASE_DIR = Path(__file__).resolve().parent
 
+print("DEBUG:",BASE_DIR)
+
 EMB_SIZE = 64
 HIDDEN_SIZE = 36
 EPOCHS = 4
