@@ -19,6 +19,12 @@ BATCH_SIZE = 12
 NUM_HEADS = 4
 
 CHECKPOINT_DIR = BASE_DIR.joinpath('data/bert_checkpoints')
+# this dir. does not exist!
+import os
+if not os.path.exists(CHECKPOINT_DIR):
+   os.makedirs(CHECKPOINT_DIR)
+
+
 
 timestamp = datetime.datetime.utcnow().timestamp()
 LOG_DIR = BASE_DIR.joinpath(f'data/logs/bert_experiment_{timestamp}')
